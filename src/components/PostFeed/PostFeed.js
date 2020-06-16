@@ -13,7 +13,7 @@ const PostFeed = () => {
         edges {
           node {
             frontmatter {
-              date
+              date(fromNow: false, formatString: "dddd DD MMMM YYYY", locale: "")
               description
               title
             }
@@ -34,7 +34,7 @@ const PostFeed = () => {
     <section className="post_feed">
       {
         data.allMarkdownRemark.edges.map(({node}) => (
-          <Post  key={node.id} title={node.frontmatter.title} description={node.frontmatter.description} html={node.html} link={node.fields.slug}/>
+          <Post  key={node.id} title={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} html={node.html} link={node.fields.slug}/>
         ))
       }
       {/* <h1>{data.allMarkdownRemark.frontmatter.title}</h1> */}
