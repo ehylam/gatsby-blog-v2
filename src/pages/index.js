@@ -1,15 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
+import PostFeed from '../components/PostFeed/PostFeed'
 import Layout from "../components/layout"
-// import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+  return (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+       <PostFeed />
   </Layout>
-)
+)}
 
 export default IndexPage
+
+
