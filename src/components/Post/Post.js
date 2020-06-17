@@ -10,8 +10,14 @@ const Post = (props) => {
       </div>
 
       <a className="post__link" href={props.link}>
-        <h1>{props.title}</h1>
-        <h3>{props.description}</h3>
+        <div className="heading">
+          <h1>{props.title}</h1>
+          <h1>{props.title}</h1>
+        </div>
+        <div className="description">
+          <h3>{props.description}</h3>
+          <h3>{props.description}</h3>
+        </div>
       </a>
     </article>
    );
