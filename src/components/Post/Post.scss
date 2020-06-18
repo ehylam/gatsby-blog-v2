@@ -67,6 +67,7 @@
 					}
 
 					&:last-child {
+						text-decoration: underline;
 						transform: translate3d(0, 0%, 0);
 					}
 				}
@@ -128,7 +129,7 @@
 			margin-bottom: 5px;
 			height: 22px;
 			@media screen and (min-width: 768px) {
-				height: 30px;
+				height: 29px;
 			}
 			h1 {
 				transition: all .5s ease;
