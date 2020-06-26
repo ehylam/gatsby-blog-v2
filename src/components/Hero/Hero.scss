@@ -9,12 +9,23 @@
 
 		&--left {
 			@media screen and (min-width: 1024px) {
-				width: 70%;
+				width: 30%;
+				padding: 30px;
+			}
+			h1 {
+				margin-bottom: 0;
 			}
 		}
 		&--right {
+			.bg {
+				// height: 60vh;
+				padding-bottom: 66.25%;
+				width: 100%;
+				background-position: center;
+				background-size: cover;
+			}
 			@media screen and (min-width: 1024px) {
-				width: 30%;
+				width: 70%;
 				padding: 30px;
 			}
 		}
