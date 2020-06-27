@@ -27,13 +27,10 @@ const PostFeed = () => {
       }
     }
   `)
-
-  console.log(data);
-
   return (
     <section className="post_feed">
       {
-        data.allMarkdownRemark.edges.map(({node}) => (
+        data.allMarkdownRemark.edges.reverse().map(({node}) => (
           <Post  key={node.id} title={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} html={node.html} link={node.fields.slug}/>
         ))
       }

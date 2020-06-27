@@ -7,6 +7,10 @@ import './Header.scss'
 const Header = ({ siteTitle }) => (
  <header>
    <span>Hello, World - {siteTitle} </span>
+
+   <nav>
+     <Link to="/">Home</Link>
+   </nav>
  </header>
 )
 
