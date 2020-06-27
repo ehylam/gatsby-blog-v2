@@ -1,8 +1,10 @@
 h1 {
 	line-height: 1em;
 	font-size: 1.3em;
+	margin-bottom: 0.5em;
 	@include breakpoint(up,md) {
 		font-size: 1.8em;
+		line-height: 1.1;
 	}
 }
 
@@ -35,5 +37,6 @@ p {
 	font-size: 0.6em;
 	@include breakpoint(up,md) {
 		font-size: 0.9em;
+		line-height: 1.4em;
 	}
 }
