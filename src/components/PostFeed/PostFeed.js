@@ -9,7 +9,7 @@ import Post from '../Post/Post'
 const PostFeed = () => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
             frontmatter {
@@ -30,7 +30,7 @@ const PostFeed = () => {
   return (
     <section className="post_feed">
       {
-        data.allMarkdownRemark.edges.reverse().map(({node}) => (
+        data.allMarkdownRemark.edges.map(({node}) => (
           <Post  key={node.id} title={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} html={node.html} link={node.fields.slug}/>
         ))
       }
