@@ -7,7 +7,10 @@ import './Header.scss'
 const Header = ({ siteTitle }) => (
  <header className="nav wrap align-center">
   <div className="nav__logo">
+  <Link to="/">
     <h4>{siteTitle}</h4>
+  </Link>
+
   </div>
    <nav className="nav__links">
      <Link to="/">Home</Link>

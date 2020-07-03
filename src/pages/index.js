@@ -10,7 +10,7 @@ const IndexPage = ({data}) => {
   return (
   <Layout>
       <SEO title={"I know that I don't know what I'm doing.."}/>
-      {/* <Hero/> */}
+      <Hero/>
       <PostFeed />
   </Layout>
 )}
