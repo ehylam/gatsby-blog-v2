@@ -1,4 +1,22 @@
-header {
+.nav {
 	height: 10vh;
 	position: fixed;
+	width: 100%;
+	justify-content: flex-start;
+	&__logo {
+		width: 30%;
+		padding-left: 20px;
+	}
+
+	&__links {
+		width: 70%;
+		padding-right: 20px;
+		a {
+			margin-right: 10px;
+			color: black;
+			&:hover {
+				color: rgb(27, 22, 22);
+			}
+		}
+	}
 }
