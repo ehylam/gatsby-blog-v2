@@ -5,7 +5,7 @@ import React from "react"
 import './Header.scss'
 
 const Header = ({ siteTitle }) => (
- <header class="nav wrap align-center">
+ <header className="nav wrap align-center">
   <div className="nav__logo">
     <h4>{siteTitle}</h4>
   </div>
