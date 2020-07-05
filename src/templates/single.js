@@ -15,8 +15,13 @@ const SinglePage = ({data}) => {
     <Layout>
     <SEO title="Post Title Here"/>
       <section className="single wrap">
-      <h1>{frontmatter.title}</h1>
-      <div className="content" dangerouslySetInnerHTML={{__html: markdownRemark.html }}/>
+        <div className="single-wrapper__left">
+          <div className="date">{frontmatter.date}</div>
+        </div>
+        <div className="single-wrapper__right">
+          <h1>{frontmatter.title}</h1>
+          <div className="content" dangerouslySetInnerHTML={{__html: markdownRemark.html }}/>
+        </div>
       </section>
     </Layout>
    );
@@ -31,7 +36,7 @@ export const singleQuery = graphql`
       frontmatter {
         title
         description
-        date
+        date(fromNow: false, formatString: "dddd DD MMMM YYYY", locale: "")
       }
       id
       html
