@@ -10,11 +10,14 @@ const SinglePage = ({data}) => {
 
   const {markdownRemark} = data
   const {frontmatter,html} = markdownRemark
-
+  // console.log(frontmatter.image);
   return (
     <Layout>
     <SEO title="Post Title Here"/>
       <section className="single wrap">
+      <div className="single-image">
+
+      </div>
         <div className="single-wrapper__left">
           <div className="date">{frontmatter.date}</div>
         </div>

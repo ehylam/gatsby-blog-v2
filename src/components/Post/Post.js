@@ -3,20 +3,21 @@ import React from 'react';
 import './Post.scss'
 
 const Post = (props) => {
+  const {date, link, title, description} = props;
   return (
     <article className="post wrap">
       <div className="post__block">
-        <p>{props.date}</p>
+        <p>{date}</p>
       </div>
 
-      <a className="post__link" href={props.link}>
+      <a className="post__link" href={link}>
         <div className="heading">
-          <h1>{props.title}</h1>
-          <h1>{props.title}</h1>
+          <h1>{title}</h1>
+          <h1>{title}</h1>
         </div>
         <div className="description">
-          <h3>{props.description}</h3>
-          <h3>{props.description}</h3>
+          <h3>{description}</h3>
+          <h3>{description}</h3>
         </div>
       </a>
     </article>
