@@ -3,7 +3,7 @@ import React from 'react';
 import './Post.scss'
 
 const Post = (props) => {
-  const {date, link, title, description} = props;
+  const {date, link, title, description, image} = props;
   return (
     <article className="post wrap">
       <div className="post__block">
