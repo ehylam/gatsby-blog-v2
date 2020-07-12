@@ -10,13 +10,17 @@ const SinglePage = ({data}) => {
 
   const {markdownRemark} = data
   const {frontmatter,html} = markdownRemark
+  var image = false;
+  if(frontmatter.image) {
+    image = true
+  }
   return (
     <Layout>
     <SEO title="Post Title Here"/>
       <section className="single wrap">
-      <div className="single-image">
-        <img src={frontmatter.image.childImageSharp.fluid.src} alt=""/>
-      </div>
+
+        {image ? <div className="single-image"> <img src={frontmatter.image.childImageSharp.fluid.src} alt=""/></div> : <div className="single-image"></div> }
+
       <div className="single-content">
         <div className="single-content__left">
           <div className="date">{frontmatter.date}</div>
