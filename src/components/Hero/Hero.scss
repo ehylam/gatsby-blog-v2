@@ -3,6 +3,7 @@
 
 	// height: 60vh;
 	&__wrapper {
+		padding: 15px;
 		height: 100%;
 		&--left,
 		&--right {
@@ -14,6 +15,7 @@
 				width: 30%;
 			}
 			h1 {
+				font-size: 42px;
 				margin-bottom: 0;
 			}
 		}
