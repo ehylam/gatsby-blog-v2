@@ -1,36 +1,24 @@
 .hero {
 	width: 100%;
 	padding: 15px;
+	height: 100vw;
 	@media screen and (min-width: 1024px) {
 		padding: 0;
+		height: 90vh;
 	}
+
 	// height: 60vh;
 	&__wrapper {
 		height: 100%;
-		&--left,
-		&--right {
-			height: 100%;
-		}
-
-		&--left {
-			@media screen and (min-width: 1024px) {
-				width: 30%;
-			}
-			h1 {
-				font-size: 42px;
-				margin-bottom: 0;
-			}
-		}
-		&--right {
-			.bg {
-				// height: 60vh;
-				padding-bottom: 66.25%;
-				width: 100%;
-				background-position: center;
-				background-size: cover;
-			}
-			@media screen and (min-width: 1024px) {
-				width: 70%;
+		justify-content: center;
+		align-items: flex-start;
+		.bg {
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			height: calc(100% - 50px);
+			@media screen and (min-widh: 1024px) {
+				height: calc(100% - 10vh);
 			}
 		}
 	}

@@ -25,12 +25,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper wrap">
-        <div className="hero__wrapper--left">
-        <h1>Hello, World</h1>
-        </div>
-        <div className="hero__wrapper--right">
-          <div className="bg" style={{ backgroundImage: `url(${image})`}}></div>
-        </div>
+      <div className="bg" style={{ backgroundImage: `url(${image})`}}></div>
       </div>
     </section>
    );

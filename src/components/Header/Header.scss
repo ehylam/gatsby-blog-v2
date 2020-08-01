@@ -5,7 +5,9 @@
 	margin: 0 20px;
 	&__logo {
 		width: 30%;
-
+		h4 {
+			margin-bottom: 0;
+		}
 		a {
 			color: black;
 			&:hover {
