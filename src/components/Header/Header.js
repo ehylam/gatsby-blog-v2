@@ -24,7 +24,7 @@ function navStagger(direction) {
 
 ScrollTrigger.create({
   start: 10,
-  markers: true,
+  // markers: true,
   toggleClass: {
     targets: 'body',
     className: 'scroll'

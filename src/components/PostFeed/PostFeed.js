@@ -1,10 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-
 import './PostFeed.scss';
 
 import Post from '../Post/Post'
+
+const postEl = document.querySelectorAll('.post__block p');
 
 const PostFeed = () => {
   const data = useStaticQuery(graphql`
