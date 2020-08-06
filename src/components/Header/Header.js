@@ -4,7 +4,35 @@ import React from "react"
 
 import './Header.scss'
 
-const Header = ({ siteTitle }) => (
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
+}
+
+ScrollTrigger.create({
+  start: 100,
+  toggleClass: {
+    targets: 'body',
+    className: 'scroll'
+  },
+  onEnter: ({direction}) => {
+    console.log(direction)
+  },
+  onLeaveBack: ({direction}) => {
+    console.log(direction);
+  }
+
+})
+
+
+const Header = ({ siteTitle }) => {
+
+
+
+  return (
  <header className="nav wrap align-center">
   <div className="nav__logo">
   <Link to="/">
@@ -19,7 +47,8 @@ const Header = ({ siteTitle }) => (
      <Link to="/">Home Alone</Link>
    </nav>
  </header>
-)
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
