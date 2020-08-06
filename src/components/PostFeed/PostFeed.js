@@ -1,13 +1,26 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import './PostFeed.scss';
 
 import Post from '../Post/Post'
 
-const postEl = document.querySelectorAll('.post__block p');
+
+
 
 const PostFeed = () => {
+
+  useEffect(() => {
+    const postEl = document.querySelectorAll('.post__block p');
+    postEl.forEach(el => {
+      console.log(el.offsetWidth);
+      // for each hovered element set the calc the space used
+      // by the date element and minus the wrapper width and set that value to the
+      // ::after tag's width.
+    });
+  },[])
+
+
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
