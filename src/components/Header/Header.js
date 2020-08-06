@@ -12,17 +12,28 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
 }
 
+
+function navStagger(direction) {
+  const scrolled = direction === 1;
+  return gsap.to('.nav__links a',0.25, {
+    stagger: 0.3,
+    yPercent: () => scrolled ? 110 : 0,
+    autoAlpha: () => scrolled ? 0 : 1
+  })
+}
+
 ScrollTrigger.create({
-  start: 100,
+  start: 10,
+  markers: true,
   toggleClass: {
     targets: 'body',
     className: 'scroll'
   },
   onEnter: ({direction}) => {
-    console.log(direction)
+    navStagger(direction);
   },
   onLeaveBack: ({direction}) => {
-    console.log(direction);
+    navStagger(direction);
   }
 
 })

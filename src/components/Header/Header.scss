@@ -19,7 +19,9 @@
 	&__links {
 		width: 70%;
 		padding-right: 20px;
+		overflow-y: hidden;
 		a {
+			transition: all 0.5s ease;
 			margin-right: 10px;
 			color: black;
 			&:hover {
