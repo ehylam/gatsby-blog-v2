@@ -9,9 +9,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+gsap.registerPlugin(ScrollTrigger);
 
 document.querySelector('.hero').addEventListener('mousemove',heroTransition);
 

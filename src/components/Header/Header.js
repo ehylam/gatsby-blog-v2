@@ -8,9 +8,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
-}
+gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
 
 
 function navStagger(direction) {
