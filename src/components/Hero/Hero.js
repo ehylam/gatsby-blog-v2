@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import './Hero.scss'
 
@@ -11,7 +11,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.querySelector('.hero').addEventListener('mousemove',heroTransition);
+
+useEffect( () => {
+  document.querySelector('.hero').addEventListener('mousemove',heroTransition);
+},[])
 
 function heroTransition(e) {
   const { offsetX, offsetY, target } = e;
