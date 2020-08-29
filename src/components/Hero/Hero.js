@@ -1,28 +1,23 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 import './Hero.scss'
-
 import Image from '../image'
-import BackgroundImage from 'gatsby-background-image'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { gsap } from "gsap"
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
-
-
-
-
-
-
-
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.core.globals("ScrollTrigger", ScrollTrigger)
+}
 const Hero = () => {
 
-  useEffect( () => {
-    document.querySelector('.hero').addEventListener('mousemove',heroTransition);
-  },[])
+  useEffect(() => {
+
+    document.querySelector('.hero').addEventListener('mousemove', heroTransition);
+  }, [])
 
 
   function heroTransition(e) {
@@ -54,15 +49,15 @@ const Hero = () => {
     }
   `)
 
-  const image  = data.HeroImage.childImageSharp.fluid.src;
+  const image = data.HeroImage.childImageSharp.fluid.src;
   console.log(image);
   return (
     <section className="hero">
       <div className="hero__wrapper wrap">
-      <div className="bg" style={{ backgroundImage: `url(${image})`}}></div>
+        <div className="bg" style={{ backgroundImage: `url(${image})` }}></div>
       </div>
     </section>
-   );
+  );
 }
 
 export default Hero;
