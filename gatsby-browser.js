@@ -8,4 +8,4 @@
 
 
 import "./src/styles/main.scss"
-
+import "./src/scss/index.scss"

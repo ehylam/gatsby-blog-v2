@@ -18,11 +18,15 @@ if (typeof window !== "undefined") {
 function navStagger(direction) {
 
   const scrolled = direction === 1;
+
   return gsap.to('.nav__links a',0.25, {
+
     stagger: 0.3,
     yPercent: () => scrolled ? 110 : 0,
     autoAlpha: () => scrolled ? 0 : 1
+
   })
+
 }
 
 
@@ -34,7 +38,6 @@ const Header = ({ siteTitle }) => {
 
 
   useEffect(() => {
-
     ScrollTrigger.create({
       start: 10,
       // markers: true,

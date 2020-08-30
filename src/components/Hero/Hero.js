@@ -17,6 +17,7 @@ const Hero = () => {
   useEffect(() => {
 
     document.querySelector('.hero').addEventListener('mousemove', heroTransition);
+
   }, [])
 
 
