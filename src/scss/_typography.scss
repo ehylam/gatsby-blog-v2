@@ -1,10 +1,10 @@
 h1 {
 	line-height: 1em;
-	font-size: 1.3em;
+	font-size: 1em;
 	margin-bottom: 0.5em;
 	@include breakpoint(up,md) {
-		font-size: 1.8em;
-		line-height: 1.1;
+		font-size: 1.5em;
+		line-height: 1.2;
 	}
 }
 
@@ -20,7 +20,7 @@ h3 {
 	line-height: 1em;
 	font-size: 1.05em;
 	@include breakpoint(up,md) {
-		font-size: 1.3em;
+		font-size: 1.25em;
 	}
 }
 

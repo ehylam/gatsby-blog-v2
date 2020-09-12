@@ -64,7 +64,7 @@
 				h1,
 				h3 {
 					&:first-child {
-						transform: translate3d(0, -110%, 0);
+						transform: translate3d(0, -115%, 0);
 					}
 
 					&:last-child {
@@ -141,7 +141,7 @@
 				}
 				&:last-child {
 					position: absolute;
-					transform: translate3d(0, 110%, 0);
+					transform: translate3d(0, 115%, 0);
 					top: 0;
 				}
 			}
@@ -163,7 +163,7 @@
 				}
 				&:last-child {
 					position: absolute;
-					transform: translate3d(0, 110%, 0);
+					transform: translate3d(0, 115%, 0);
 					top: 0;
 				}
 			}

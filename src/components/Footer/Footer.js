@@ -1,13 +1,14 @@
 import React from "react"
 
-import './Footer.scss'
 
 
 const Footer = () => {
     return (
         <footer>
-            <div className="flex mb-4">
-            <p>Testing out utility first</p>
+            <div className="wrap">
+                <div className="flex mb-4">
+                    <p>Hi. Bye.</p>
+                </div>
             </div>
         </footer>
      );

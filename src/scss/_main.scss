@@ -1,0 +1,12 @@
+@import '../scss/mixins';
+@import '../scss/global';
+@import '../scss/variables';
+@import '../scss/typography';
+@import '../scss/utilities';
+
+// Component Styles
+@import '../scss/components/Header';
+@import '../scss/components/Footer';
+@import '../scss/components/Hero';
+@import '../scss/components/PostFeed';
+@import '../scss/components/Post';

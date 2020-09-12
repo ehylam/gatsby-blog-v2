@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, {useEffect} from "react"
 
-import './Header.scss'
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";

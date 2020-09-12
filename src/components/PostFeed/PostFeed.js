@@ -1,7 +1,6 @@
 import React, {useEffect} from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import './PostFeed.scss';
 
 import Post from '../Post/Post'
 
@@ -41,13 +40,18 @@ const PostFeed = () => {
         }
       }
     }
-  `)
+  `);
+  console.log(data.allMarkdownRemark.edges);
+
+
   return (
     <section className="post_feed">
       {
-        data.allMarkdownRemark.edges.map(({node}) => (
-          <Post  key={node.id} title={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} image={node.frontmatter.image} html={node.html} link={node.fields.slug}/>
-        ))
+        data.allMarkdownRemark.edges.map(({node}) => {
+        return   <Post  key={node.id} title={node.frontmatter.title} date={node.frontmatter.date} description={node.frontmatter.description} image={node.frontmatter.image} html={node.html} link={node.fields.slug}/>
+        }
+
+        )
       }
       {/* <h1>{data.allMarkdownRemark.frontmatter.title}</h1> */}
     </section>

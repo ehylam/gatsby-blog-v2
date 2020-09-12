@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import './Hero.scss'
 import Image from '../image'
 import { useStaticQuery, graphql } from 'gatsby';
 
