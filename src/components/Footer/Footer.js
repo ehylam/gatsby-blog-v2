@@ -1,17 +1,16 @@
 import React from "react"
 
-
-
-const Footer = () => {
-    return (
-        <footer>
-            <div className="wrap">
-                <div className="flex mb-4">
-                    <p>Hi. Bye.</p>
-                </div>
-            </div>
-        </footer>
-     );
+const Footer = data => {
+  return (
+    <footer>
+      <div className="wrap">
+        <div className="flex mb-4">
+          <p>{data.footerTitle}</p>
+        </div>
+      </div>
+    </footer>
+  )
 }
 
-export default Footer;
+export default Footer
+

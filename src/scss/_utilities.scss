@@ -4,18 +4,24 @@ main {
 
 .wrap {
 	display: flex;
-	// @media screen and(min-width: 768px) {
-	padding: 0 calc((100vw - 560px) / 2);
 	margin: 0 auto;
-	@include breakpoint(up,sm) {
-		padding: 0 calc((100vw - 1024px) / 2);
+	@include breakpoint(up,md) {
+		max-width: 560px;
+	}
+
+	@include breakpoint(up,lg) {
+		max-width: 1200px;
+	}
+
+	@include breakpoint(up,xl) {
+		max-width: 1400px;
 	}
 
 	&.flex-end {
 		@include breakpoint(up,md) {
 			justify-content: flex-end;
 			align-items: flex-end;
-			padding: 0 calc((100vw - 1200px) / 2);
+			// padding: 0 calc((100vw - 1200px) / 2);
 		}
 	}
 	// }

@@ -29,10 +29,6 @@ function navStagger(direction) {
 }
 
 
-
-
-
-
 const Header = ({ siteTitle }) => {
 
 
