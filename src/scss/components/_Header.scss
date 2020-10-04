@@ -3,7 +3,11 @@
 	// position: fixed;
 	justify-content: flex-start;
 	// margin: 0 20px;
-	max-width: 310px;
+	// max-width: 310px;
+	padding: 0 35px;
+	@include breakpoint(up,lg) {
+		padding: 0;
+	}
 	&__logo {
 		width: 30%;
 		h4 {

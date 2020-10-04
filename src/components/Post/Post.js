@@ -8,7 +8,7 @@ const Post = (props) => {
           <p>{date}</p>
         </div>
 
-        <div className="post__link">
+        <a className="post__link" href={link}>
           <div className="heading">
             <h1>{title}</h1>
             <h1>{title}</h1>
@@ -17,7 +17,7 @@ const Post = (props) => {
             <h3>{description}</h3>
             <h3>{description}</h3>
           </div>
-        </div>
+        </a>
     </article>
    );
 }

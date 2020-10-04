@@ -1,9 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Post from "../Post/Post"
 
 const PostFeed = () => {
+
+  var [getTest,setTest] = useState({loading: true});
+
+
   useEffect(() => {
     const postEl = document.querySelectorAll(".post__block p")
     postEl.forEach(el => {
